@@ -583,10 +583,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@electrojet/core@^0.0.13":
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/@electrojet/core/-/core-0.0.13.tgz#18761ff61956ec57e3f731a519c4d1300553c478"
-  integrity sha512-1kypj8n4kfo7U6Vt/8u4lRS09/baXRGH7gEY5IHQGzC+/2UeMuiy/Phpu4M/XN59D8dhst80GMLgZrpu4fhLSg==
+"@electrojet/core@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@electrojet/core/-/core-0.1.0.tgz#d262c3c7fd11adbfbe285eae9d1913a36550732a"
+  integrity sha512-SzgWgsbhQGxXganaO5TeS69i9aaaODo2I0Pne59PkfEFAy6HdYEu2T8BgZ9ljrbLg0wDzAKiDsg/e/k6qMK4ZQ==
   dependencies:
     "@babel/core" "^7.2.2"
     "@babel/preset-env" "^7.2.3"
@@ -610,7 +610,7 @@
     optimize-css-assets-webpack-plugin "^5.0.1"
     ora "^3.0.0"
     style-loader "^0.23.1"
-    uglifyjs-webpack-plugin "^2.1.1"
+    terser-webpack-plugin "^1.2.1"
     webpack "^4.28.3"
     webpack-cli "^3.1.2"
     webpack-dev-server "^3.1.14"
@@ -618,20 +618,19 @@
     webpackbar "^3.1.4"
     which "^1.3.1"
 
-"@electrojet/svelte@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@electrojet/svelte/-/svelte-0.0.1.tgz#f352d9902a3bda9ae44b87bdc639fe2329b205b8"
-  integrity sha512-jD/dNtVv0i6JMBTB6rBm790YP/NDWiKIZEOzYnCqJ29TH9BeeqTL1wUpgBgVxtan/jVT/buNEFn4NKFkMXIciw==
+"@electrojet/svelte@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@electrojet/svelte/-/svelte-0.0.3.tgz#d588f85408df806ca26d33f69e4a4cc6ea9d9f91"
+  integrity sha512-Oo8skA9SEyC4vfdsiUZQyufJfjce7IJciemrt54ErFmKctxYM9CDnsTuYo+hqfiAQgeNJvYRXTDHl399nvFxMA==
   dependencies:
-    "@electrojet/core" "^0.0.13"
+    "@electrojet/core" "^0.1.0"
     chalk "^2.4.1"
     cosmiconfig "^5.0.7"
     cross-spawn "^6.0.5"
     enquirer "^2.3.0"
-    fs-jetpack "^2.2.0"
+    html-webpack-plugin "^3.2.0"
     meow "^5.0.0"
     ora "^3.0.0"
-    phaser-ce "^2.11.1"
     svelte-loader "^2.12.0"
 
 "@iamstarkov/listr-update-renderer@0.4.1":
@@ -1307,7 +1306,7 @@ cacache@^10.0.4:
     unique-filename "^1.1.0"
     y18n "^4.0.0"
 
-cacache@^11.0.2, cacache@^11.2.0:
+cacache@^11.0.2:
   version "11.3.2"
   resolved "https://registry.yarnpkg.com/cacache/-/cacache-11.3.2.tgz#2d81e308e3d258ca38125b676b98b2ac9ce69bfa"
   integrity sha512-E0zP4EPGDOaT2chM08Als91eYnf8Z+eH1awwwVsngUmgppfM5jjJ8l3z5vO5p5w/I3LsiXawb1sW0VY65pQABg==
@@ -5045,11 +5044,6 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-phaser-ce@^2.11.1:
-  version "2.11.1"
-  resolved "https://registry.yarnpkg.com/phaser-ce/-/phaser-ce-2.11.1.tgz#a40f918151ceae3e6ed270aec9e0606d198c655d"
-  integrity sha512-5Ta9g5bZI7YzKzON6LoUGhvkG64swmbHvFntydjNssLLbDtWb9eo3WxuVeKkbxl4bJ/iIP/Zs6QbuxhxsWwoWg==
-
 pify@^2.0.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -6570,7 +6564,7 @@ tar@^4:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
-terser-webpack-plugin@^1.1.0:
+terser-webpack-plugin@^1.1.0, terser-webpack-plugin@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-1.2.1.tgz#7545da9ae5f4f9ae6a0ac961eb46f5e7c845cc26"
   integrity sha512-GGSt+gbT0oKcMDmPx4SRSfJPE1XaN3kQRWG4ghxKQw9cn5G9x6aCKSsgYdvyM0na9NJ4Drv0RG6jbBByZ5CMjw==
@@ -6715,27 +6709,13 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-uglify-js@3.4.x, uglify-js@^3.0.0:
+uglify-js@3.4.x:
   version "3.4.9"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.4.9.tgz#af02f180c1207d76432e473ed24a28f4a782bae3"
   integrity sha512-8CJsbKOtEbnJsTyv6LE6m6ZKniqMiFWmm9sRbopbkGs3gMPPfd3Fh8iIA4Ykv5MgaTbqHr4BaoGLJLZNhsrW1Q==
   dependencies:
     commander "~2.17.1"
     source-map "~0.6.1"
-
-uglifyjs-webpack-plugin@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/uglifyjs-webpack-plugin/-/uglifyjs-webpack-plugin-2.1.1.tgz#6937d7513a37280d4792f1fb536bef35e08e420a"
-  integrity sha512-TQEcyMNkObX/H+FfcKjiDgs5RcXX8vW2UUUrDTOfQgg3lrafztfeM5WAwXo+AzqozJK6NP9w98xNpG/dutzSsg==
-  dependencies:
-    cacache "^11.2.0"
-    find-cache-dir "^2.0.0"
-    schema-utils "^1.0.0"
-    serialize-javascript "^1.4.0"
-    source-map "^0.6.1"
-    uglify-js "^3.0.0"
-    webpack-sources "^1.1.0"
-    worker-farm "^1.5.2"
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
