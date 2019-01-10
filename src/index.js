@@ -1,12 +1,10 @@
 import App from "./App.html";
 
 const app = new App({
-  target: document.body,
+  target: document.querySelector("main"),
   data: {
     name: "world"
   }
 });
-
-window.app = app;
 
 export default app;
