@@ -1,10 +1,12 @@
-import App from "./App.html";
+import App from "./App.svelte";
 
 const app = new App({
-  target: document.querySelector("main"),
+  target: document.body,
   data: {
     name: "world"
   }
 });
+
+window.app = app;
 
 export default app;
